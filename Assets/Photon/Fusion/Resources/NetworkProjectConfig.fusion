@@ -1,9 +1,9 @@
 {
     "Version": 1,
     "TypeId": "NetworkProjectConfig",
-    "PeerMode": 1,
+    "PeerMode": 0,
     "LagCompensation": {
-        "Enabled": true,
+        "Enabled": false,
         "HitboxBufferLengthInMs": 200,
         "HitboxDefaultCapacity": 512,
         "CachedStaticCollidersSize": 64
@@ -12,17 +12,21 @@
     "InvokeRenderInBatchMode": true,
     "NetworkIdIsObjectName": false,
     "HideNetworkObjectInactivityGuard": false,
+    "AllowClientServerModesInWebGL": false,
+    "ClientsRecordFrameAndPacketTimingTraces": false,
     "Simulation": {
         "InputDataWordCount": 0,
         "ReplicationFeatures": 1,
         "InputTransferMode": 0,
+        "SimulationUpdateTimeMode": 0,
         "PlayerCount": 10,
         "TickRateSelection": {
             "Client": 64,
             "ServerIndex": 0,
             "ClientSendIndex": 1,
             "ServerSendIndex": 1
-        }
+        },
+        "MaxObjectDestroysSentPerPacket": 32
     },
     "Network": {
         "ConnectionTimeout": 10.0,
@@ -60,7 +64,8 @@
         "Fusion.Unity",
         "Assembly-CSharp",
         "Assembly-CSharp-firstpass",
-        "Fusion.Addons.Physics"
+        "Fusion.Addons.Physics",
+        "Fusion.Addons.FSM"
     ],
     "UseSerializableDictionary": true,
     "NullChecksForNetworkedProperties": true,
